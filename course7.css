@@ -1,0 +1,113 @@
+ /* transform:
+ translate == move(x,y) 
+scale == zoom in or zoom out(x,y) if you put a negative num it will flip the output
+rotate == spin the item (deg) دوران
+skew == بيلف بزاويه
+transition : property , duration , timing-function , delay */
+
+div{
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    display: flex inline-block;
+    height: 250px;
+    background-repeat: no-repeat;
+    margin:0;
+    text-align: center;
+    position: relative;
+}
+p{
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(50,50);
+}
+.div1{
+    background-image: url(../../CSS/session7/desert.jpeg);
+}
+.p1{
+    position: absolute;
+    margin: auto;
+    animation-name: desert;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    /* animation : desert 2s infinite; */
+}
+@keyframes desert{
+    0%{ 
+        transform: translatey(0); 
+    }
+    50%{
+        transform: translatey(-50px); 
+    }
+    100%{
+        transform: translatey(50px); 
+    }
+}
+
+.div2{
+    background-image: url(../../CSS/session7/forest.jpeg);
+}
+.p2{
+    position: absolute;
+    animation-name: forest;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    /* animation : forest 2s infinite; */
+}
+@keyframes forest{
+    0%{ 
+         opacity:0;
+    }
+    50%{
+        opacity:2;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+.div3{
+    background-image: url(../../CSS/session7/canyon.jpeg);
+}
+.p3{
+    position: absolute;
+    animation-name: canyon;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    /* animation : canyon 2s infinite; */
+}
+@keyframes canyon{
+    0%{ 
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.div4{
+    background-image: url(../../CSS/session7/glasier.jpeg);
+}
+.p4{
+    position: absolute;
+    animation-name: glaseir;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    /* animation : glaseir 2s infinite; */
+}
+@keyframes glaseir{
+    0%{
+        transform:scale(1.5) ;
+    }
+    50%{
+        transform:scale(1) ;
+    }
+    100%{
+        transform:scale(1.5) ;
+    }
+}
+
+
